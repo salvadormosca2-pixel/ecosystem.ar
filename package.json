@@ -1,0 +1,10 @@
+{
+  "name": "larpik-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve landing-pages -l $PORT -s"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
