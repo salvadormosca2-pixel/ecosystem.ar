@@ -267,17 +267,72 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
       </div>
       <div class="rv py-8 border-b border-white/10" style="--d:80ms">
         <p class="font-mono text-xs text-grisc uppercase tracking-[.25em] mb-3">Pieza 2 — Tu presencia</p>
-        <h3 class="font-cond font-bold uppercase text-3xl md:text-5xl">Tu página, hecha a medida</h3>
-        <p class="text-gris text-lg leading-relaxed mt-4">La cara digital de tu negocio. Donde el cliente llega, ve algo serio, confía y arranca la conversación. No un perfil prestado: tu propia página.</p>
+        <h3 class="font-cond font-bold uppercase text-3xl md:text-5xl">Tu página web, hecha a medida</h3>
+        <p class="text-gris text-lg leading-relaxed mt-4">La cara digital de tu negocio, diseñada para tu rubro: tu stock o tus servicios con fotos, tus horarios, tu ubicación y un botón que arranca la conversación con tu empleado digital. El cliente que llega desde Instagram o Google ve algo serio, confía y escribe. No un perfil prestado ni un linktree: tu propia página, con tu nombre.</p>
       </div>
       <div class="rv py-8 border-b border-white/10" style="--d:160ms">
         <p class="font-mono text-xs text-grisc uppercase tracking-[.25em] mb-3">Pieza 3 — El control</p>
         <h3 class="font-cond font-bold uppercase text-3xl md:text-5xl">Tu panel de administración</h3>
-        <p class="text-gris text-lg leading-relaxed mt-4">Consultas, turnos, seguimientos, qué se cerró y qué quedó en el camino. Por primera vez ves lo que antes pasaba a tus espaldas.</p>
+        <p class="text-gris text-lg leading-relaxed mt-4">Un panel a medida para administrar tu negocio desde un solo lugar: cada consulta con nombre y estado, la agenda de turnos, qué se cerró, qué está por cerrarse y qué quedó en el camino. Abrís el teléfono y sabés cómo viene el mes. Por primera vez ves lo que antes pasaba a tus espaldas.</p>
       </div>
     </div>
 
-    <p class="rv text-gris text-lg md:text-xl leading-relaxed mt-14 max-w-2xl" style="--d:100ms">Por separado son herramientas. Juntas son un circuito: el cliente entra por tu página, lo atiende tu empleado digital y vos mirás todo desde el panel. <span class="text-white/90">Nada queda afuera. Nada se pierde.</span></p>
+    <!-- Mockups: la página y el panel se VEN, no solo se nombran (espejo del mockup de WhatsApp del hero) -->
+    <div class="mt-16 md:mt-24 grid md:grid-cols-2 gap-10 md:gap-8 items-start" aria-hidden="true">
+      <!-- Tu página: frame de navegador -->
+      <div class="rv">
+        <div class="rounded-3xl border border-white/10 bg-humo overflow-hidden">
+          <div class="flex items-center gap-2 px-5 py-3.5 border-b border-white/5">
+            <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-white/15"></span>
+            <p class="ml-3 font-mono text-[11px] text-grisc">tunegocio.ar</p>
+          </div>
+          <div class="px-6 py-7">
+            <p class="font-cond font-bold uppercase text-2xl leading-none">Tu negocio</p>
+            <p class="font-mono text-[10px] text-grisc uppercase tracking-[.2em] mt-1.5">Catamarca · Lun a Sáb 9–20hs</p>
+            <div class="grid grid-cols-3 gap-2.5 mt-5">
+              <div class="aspect-[4/3] rounded-lg bg-white/[.06]"></div>
+              <div class="aspect-[4/3] rounded-lg bg-white/[.06]"></div>
+              <div class="aspect-[4/3] rounded-lg bg-white/[.06]"></div>
+            </div>
+            <div class="mt-5 bg-azul/90 text-white text-center text-sm font-medium rounded-lg py-3">Consultanos por WhatsApp →</div>
+          </div>
+        </div>
+        <p class="mt-4 font-mono text-xs text-gris text-center">Tu página: donde el cliente llega, confía y escribe.</p>
+      </div>
+
+      <!-- Tu panel: dashboard del dueño -->
+      <div class="rv" style="--d:120ms">
+        <div class="rounded-3xl border border-white/10 bg-humo overflow-hidden">
+          <div class="flex items-center justify-between px-5 py-3.5 border-b border-white/5">
+            <p class="text-sm font-medium">Panel de administración</p>
+            <p class="font-mono text-[11px] text-grisc" x-text="'hoy · ' + hora"></p>
+          </div>
+          <div class="px-6 py-6">
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div><p class="font-cond font-bold text-3xl text-azul">14</p><p class="font-mono text-[10px] text-grisc uppercase tracking-wide mt-1">Consultas hoy</p></div>
+              <div><p class="font-cond font-bold text-3xl">9</p><p class="font-mono text-[10px] text-grisc uppercase tracking-wide mt-1">Calificadas</p></div>
+              <div><p class="font-cond font-bold text-3xl">3</p><p class="font-mono text-[10px] text-grisc uppercase tracking-wide mt-1">Cerradas</p></div>
+            </div>
+            <div class="mt-5 space-y-2 text-sm">
+              <div class="flex items-center justify-between rounded-lg bg-white/[.04] px-4 py-2.5">
+                <p>Marcela · consulta sábado</p><p class="font-mono text-[10px] text-azul uppercase">Caliente</p>
+              </div>
+              <div class="flex items-center justify-between rounded-lg bg-white/[.04] px-4 py-2.5">
+                <p>Jorge · turno 10:30</p><p class="font-mono text-[10px] text-gris uppercase">Confirmado</p>
+              </div>
+              <div class="flex items-center justify-between rounded-lg bg-white/[.04] px-4 py-2.5">
+                <p>Río Autos · seña enviada</p><p class="font-mono text-[10px] text-gris uppercase">Cerrado ✓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 font-mono text-xs text-gris text-center">Tu panel: todo tu negocio, de un vistazo.</p>
+      </div>
+    </div>
+
+    <p class="rv text-gris text-lg md:text-xl leading-relaxed mt-16 max-w-2xl" style="--d:100ms">Por separado son herramientas. Juntas son un circuito: el cliente entra por tu página, lo atiende tu empleado digital y vos administrás todo desde el panel. <span class="text-white/90">Nada queda afuera. Nada se pierde.</span></p>
   </div>
 </section>
 
@@ -377,20 +432,31 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
     <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 06 — La oferta</p>
     <h2 class="rv font-cond font-bold uppercase leading-[.95] text-5xl md:text-8xl max-w-4xl" style="--d:80ms">Cero consultas perdidas. O no pagás.</h2>
 
-    <div class="mt-16 md:mt-24 max-w-3xl">
+    <p class="rv font-mono text-xs text-grisc uppercase tracking-[.25em] mt-16 md:mt-24 mb-2">Todo lo que te llevás — siempre, todo junto</p>
+    <div class="max-w-3xl">
       <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8">
-        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">El sistema entero, montado por nosotros</p>
-        <p class="text-gris mt-2 md:mt-0">Las tres piezas: el empleado digital entrenado con tu negocio —tus precios, tus horarios, tu forma de hablar—, tu página y tu panel. Vos no tocás nada técnico.</p>
+        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Tu empleado digital 24/7</p>
+        <p class="text-gris mt-2 md:mt-0">Entrenado con tu negocio: tus precios, tus horarios, tu forma de hablar. Atiende, califica, agenda y hace el seguimiento hasta que el cliente compra o dice que no.</p>
       </div>
-      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:80ms">
-        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Tu WhatsApp de siempre</p>
-        <p class="text-gris mt-2 md:mt-0">Se conecta a tu número actual. Tus clientes no notan ningún cambio, salvo que ahora les contestan al toque.</p>
+      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:60ms">
+        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Tu página web a medida</p>
+        <p class="text-gris mt-2 md:mt-0">La cara digital de tu negocio: tu stock o tus servicios, tus horarios, tu ubicación. Recibe al que llega desde Instagram o Google y lo empuja a la conversación.</p>
       </div>
-      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:160ms">
+      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:120ms">
+        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Tu panel de administración</p>
+        <p class="text-gris mt-2 md:mt-0">Consultas, turnos y cierres en un solo lugar. Administrás tu negocio desde el teléfono y sabés cómo viene el mes, sin preguntarle a nadie.</p>
+      </div>
+      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:180ms">
+        <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Implementación en 7 a 14 días</p>
+        <p class="text-gris mt-2 md:mt-0">Lo montamos nosotros, sobre tu WhatsApp de siempre: mismo número, cero cambios para tus clientes, nada técnico para vos.</p>
+      </div>
+      <div class="rv py-6 border-b border-white/10 md:flex md:items-baseline md:gap-8" style="--d:240ms">
         <p class="font-cond font-semibold uppercase text-2xl md:w-72 shrink-0">Primer mes acompañado</p>
         <p class="text-gris mt-2 md:mt-0">Ajustes finos, soporte directo con nosotros y reporte de cada consulta que entró. Vas a ver la fuga cerrarse con números.</p>
       </div>
     </div>
+
+    <p class="rv text-gris text-lg leading-relaxed mt-10 max-w-2xl">Las tres piezas van siempre juntas. <span class="text-white/90">No vendemos bots sueltos</span>, porque un bot suelto no cierra la fuga: la mueve de lugar.</p>
 
     <!-- Garantía: el hilo pasa por el corazón de la oferta -->
     <div class="mt-24 md:mt-32 text-center">
