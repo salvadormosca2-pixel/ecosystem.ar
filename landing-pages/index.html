@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="demo.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
@@ -99,7 +100,12 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
 <nav class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-fondo/85 backdrop-blur-sm">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="#" class="font-cond font-semibold text-lg tracking-tight">ecosystem<span class="text-azul">.ar</span></a>
-    <a :href="wa" class="font-body text-sm font-medium bg-azul text-white px-5 py-2.5 rounded-lg hover:bg-[#1a75ff] transition-colors">Quiero dejar de perder ventas</a>
+    <div class="flex items-center gap-5">
+      <!-- Salida de baja fricción: el que todavía no está listo para el CTA
+           tiene adónde ir en vez de irse de la página. -->
+      <button type="button" data-abrir-demo class="hidden sm:block font-mono text-xs text-gris uppercase tracking-[.18em] hover:text-azul transition-colors">Ver demo</button>
+      <a :href="wa" class="font-body text-sm font-medium bg-azul text-white px-5 py-2.5 rounded-lg hover:bg-[#1a75ff] transition-colors">Quiero dejar de perder ventas</a>
+    </div>
   </div>
 </nav>
 
@@ -381,7 +387,170 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════
-     ESTACIÓN 6 — TU EQUIPO GANA
+     ESTACIÓN 05 — LA DEMO
+     Por qué acá y no antes: el visitante viene de leer su propio rubro
+     nombrado en "Dos caminos". Ese es el punto exacto donde aparece la
+     pregunta "¿y esto en MI negocio?", y una demo es la única respuesta
+     que no suena a promesa. Va antes de la oferta a propósito: que
+     llegue al precio con la prueba ya en la mano, no al revés.
+     La demo NO vive en la página: acá solo está la puerta. Se toca y
+     se entra, así el hilo de la landing no se corta nunca.
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="relative z-10 py-32 md:py-48 px-6 md:px-10" id="demo">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 05 — La demo</p>
+    <h2 class="rv font-cond font-bold uppercase leading-[.95] text-5xl md:text-8xl max-w-4xl mx-auto" style="--d:80ms">No te lo contamos. Probalo.</h2>
+
+    <p class="rv text-gris text-lg md:text-xl leading-relaxed mt-10 max-w-xl mx-auto" style="--d:160ms">
+      Elegí tu rubro y escribile al empleado digital como si fueras tu propio cliente. Te va a mostrar stock con fotos, manejar tus objeciones y cerrar la venta o tomar la reserva. Al costado vas viendo lo que hace por detrás.
+    </p>
+
+    <div data-hilo class="mx-auto nodo mt-16 mb-14"></div>
+
+    <div class="rv" style="--d:240ms">
+      <button type="button" data-abrir-demo class="inline-block bg-azul text-white font-semibold text-xl px-12 py-6 rounded-lg hover:bg-[#1a75ff] transition-all hover:-translate-y-0.5 shadow-[0_0_60px_rgba(0,102,255,.35)]">Ver demo de mi rubro</button>
+      <p class="mt-5 font-mono text-xs text-grisc">6 rubros · Sin registro · Se abre acá mismo, no te vas de la página</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     ESTACIÓN 06 — POR QUÉ NOS ELIGEN (el resumen)
+     Por qué acá y no arriba: es un RECAP, no un gancho. Arriba le
+     robaría el golpe a la Estación 01 (la fuga) y mostraría el mockup
+     de WhatsApp dos veces en pantalla y media. Acá el visitante ya
+     probó la demo: el bento consolida lo que acaba de sentir y lo
+     deja parado justo antes del precio.
+     Única sección con cajas de toda la página, a propósito: marca el
+     cambio de registro entre "te lo cuento" y "te lo cobro".
+     Todos los mockups son ilustrativos y dicen que lo son — regla de
+     honestidad: ningún número acá es el resultado de un cliente real.
+     ══════════════════════════════════════════════════════════════════ -->
+<section class="relative z-10 py-24 md:py-32 px-6 md:px-10" id="por-que">
+  <div class="max-w-6xl mx-auto pl-8 md:pl-0">
+    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-5">Estación 06 — Por qué nos eligen</p>
+
+    <div class="md:grid md:grid-cols-12 md:gap-10 md:items-start">
+      <h2 class="rv font-cond font-bold uppercase leading-[.95] text-4xl md:text-5xl md:col-span-6" style="--d:80ms">Por qué los negocios eligen ecosystem.ar</h2>
+      <p class="rv text-gris text-[15px] leading-relaxed mt-6 md:mt-1 md:col-span-6" style="--d:160ms">No vendemos un bot suelto. Instalamos tres piezas que trabajan juntas: tu página, un empleado digital que atiende las 24 horas y un panel donde ves todo desde el celular. En 7 a 14 días, llave en mano.</p>
+    </div>
+
+    <div data-hilo class="hidden md:block mx-auto nodo mt-10"></div>
+
+    <!-- Bento: columna 1 (el chat, la pieza que más pesa) · columna 2 · columna 3
+         Escala propia y más chica que el resto de la página: es un resumen de
+         un vistazo, no una estación para leer scrolleando. -->
+    <div class="mt-10 grid md:grid-cols-3 gap-4 items-start">
+
+      <!-- ── Celda 1: la consulta que no muere ── -->
+      <div class="rv rounded-2xl border border-white/10 bg-humo p-5">
+        <h3 class="font-cond font-semibold text-xl leading-tight">Ninguna consulta muere en visto</h3>
+
+        <div class="mt-4 rounded-xl border border-white/10 bg-[#0F0F0F] overflow-hidden" aria-hidden="true">
+          <div class="flex items-center gap-2.5 px-3.5 py-2.5 border-b border-white/5">
+            <div class="w-7 h-7 rounded-full bg-azul/90 flex items-center justify-center font-cond font-semibold text-xs">TN</div>
+            <div>
+              <p class="text-[13px] font-medium leading-tight">Tu negocio</p>
+              <p class="text-[10px] text-emerald-400/80 flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>en línea</p>
+            </div>
+          </div>
+          <div class="px-3.5 py-4 space-y-2 text-[13px] leading-snug">
+            <p class="text-center"><span class="font-mono text-[9px] text-grisc bg-white/[.04] rounded-full px-2.5 py-0.5">domingo · 23:38</span></p>
+            <div class="max-w-[90%] bg-white/[.06] rounded-xl rounded-tl-sm px-3 py-2">
+              <p>Hola, ¿tenés el jean mom tiro alto en azul, talle 38?</p>
+            </div>
+            <div class="max-w-[90%] ml-auto space-y-1.5">
+              <div class="h-16 rounded-lg bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center">
+                <p class="font-mono text-[10px] text-emerald-300/70">foto · jean mom azul</p>
+              </div>
+              <div class="bg-emerald-500/10 border-l-2 border-emerald-400 rounded-xl rounded-tr-sm px-3 py-2">
+                <p>¡Hola! Sí, tenemos el jean mom tiro alto en azul, talle 38. En stock.</p>
+              </div>
+              <div class="bg-emerald-500/10 border-l-2 border-emerald-400 rounded-xl px-3 py-2">
+                <p>Precio: <span class="font-semibold">$42.900</span>. Te lo puedo dejar reservado a tu nombre.</p>
+                <p class="text-right font-mono text-[9px] text-grisc mt-0.5">23:39 ✓✓</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-gris text-[15px] leading-relaxed mt-4">Un domingo a las 23:38, con el local cerrado. Muestra el producto, pasa el precio y deja la venta encaminada. Si se enfría, lo sigue solo.</p>
+        <p class="font-mono text-[10px] text-grisc mt-3">conversación de ejemplo</p>
+      </div>
+
+      <!-- ── Columna 2 ── -->
+      <div class="space-y-4">
+        <div class="rv rounded-2xl border border-white/10 bg-humo p-5" style="--d:80ms">
+          <h3 class="font-cond font-semibold text-xl leading-tight">Cuesta menos que sumar un empleado</h3>
+          <p class="text-gris text-[15px] leading-relaxed mt-2.5">Un empleado más atiende medio día, se enferma, se toma vacaciones y un día se va.</p>
+          <p class="font-cond font-semibold text-center leading-none text-3xl md:text-4xl my-6 text-white/70">medio día <span class="text-white/30">→</span> <span class="text-white">24 horas</span></p>
+          <p class="text-gris text-[15px] leading-relaxed">El sistema no falta nunca, no cobra comisión y no se toma vacaciones. Y a tu gente de ahora la deja rendir más, no la reemplaza.</p>
+        </div>
+
+        <!-- Celda azul: la única mancha de color del bento, sobre el dato que más duele -->
+        <div class="rv rounded-2xl bg-azul p-5" style="--d:160ms">
+          <h3 class="font-cond font-semibold text-xl leading-tight text-white">Por primera vez ves lo que pasa</h3>
+
+          <div class="mt-4 rounded-xl bg-[#050505] p-4" aria-hidden="true">
+            <p class="text-[13px] font-medium">Consultas por día</p>
+            <p class="font-mono text-[9px] text-grisc mt-1 leading-relaxed">el domingo es el día que más entra — y es el día que el local está cerrado</p>
+            <div class="mt-5 flex items-end justify-between gap-1.5">
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">54</p><div class="w-full rounded-t bg-azul/60" style="height:42px"></div><p class="font-mono text-[9px] text-grisc">Lun</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">61</p><div class="w-full rounded-t bg-azul/60" style="height:48px"></div><p class="font-mono text-[9px] text-grisc">Mar</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">49</p><div class="w-full rounded-t bg-azul/60" style="height:38px"></div><p class="font-mono text-[9px] text-grisc">Mié</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">72</p><div class="w-full rounded-t bg-azul/60" style="height:56px"></div><p class="font-mono text-[9px] text-grisc">Jue</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">88</p><div class="w-full rounded-t bg-azul/60" style="height:69px"></div><p class="font-mono text-[9px] text-grisc">Vie</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-grisc">67</p><div class="w-full rounded-t bg-azul/60" style="height:52px"></div><p class="font-mono text-[9px] text-grisc">Sáb</p></div>
+              <div class="flex-1 flex flex-col items-center gap-1"><p class="font-mono text-[9px] text-white">96</p><div class="w-full rounded-t bg-azul" style="height:75px"></div><p class="font-mono text-[9px] font-medium text-white">Dom</p></div>
+            </div>
+          </div>
+
+          <p class="text-white/90 text-[15px] leading-relaxed mt-4">Cuántas consultas entraron, cuántas se cerraron y cuántas se cayeron. Desde el celular, estés donde estés.</p>
+          <p class="font-mono text-[10px] text-white/50 mt-3">panel de ejemplo</p>
+        </div>
+      </div>
+
+      <!-- ── Columna 3 ── -->
+      <div class="space-y-4">
+        <div class="rv rounded-2xl border border-white/10 bg-humo p-5" style="--d:120ms">
+          <h3 class="font-cond font-semibold text-xl leading-tight">Tu vendedor vuelve a vender</h3>
+
+          <div class="mt-4 rounded-xl border border-white/10 bg-[#0F0F0F] overflow-hidden" aria-hidden="true">
+            <div class="flex items-center justify-between px-3.5 py-2.5 border-b border-white/5">
+              <p class="text-[13px] font-medium">Panel de consultas</p>
+              <p class="font-mono text-[9px] text-grisc flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-azul"></span>sistema activo</p>
+            </div>
+            <!-- 2×2 en mobile: en 4 columnas los rótulos empujaban la tarjeta y desbordaban la página -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/5 border-b border-white/5">
+              <div class="px-2.5 py-2.5"><p class="font-mono text-[9px] text-grisc uppercase tracking-wide">Consultas</p><p class="font-cond font-bold text-lg leading-tight mt-0.5">1.284</p></div>
+              <div class="px-2.5 py-2.5"><p class="font-mono text-[9px] text-grisc uppercase tracking-wide">&lt; 5 min</p><p class="font-cond font-bold text-lg leading-tight mt-0.5 text-emerald-400">96%</p></div>
+              <div class="px-2.5 py-2.5"><p class="font-mono text-[9px] text-grisc uppercase tracking-wide">Calificadas</p><p class="font-cond font-bold text-lg leading-tight mt-0.5">742</p></div>
+              <div class="px-2.5 py-2.5"><p class="font-mono text-[9px] text-grisc uppercase tracking-wide">Cerradas</p><p class="font-cond font-bold text-lg leading-tight mt-0.5">311</p></div>
+            </div>
+            <div class="px-3.5 py-3 space-y-2 text-[13px]">
+              <div class="flex items-center justify-between gap-3"><p class="truncate">Marcela · WhatsApp</p><p class="font-mono text-[9px] text-emerald-400 shrink-0">Cerrada</p></div>
+              <div class="flex items-center justify-between gap-3"><p class="truncate">Jorge · Instagram</p><p class="font-mono text-[9px] text-azul shrink-0">Caliente</p></div>
+              <div class="flex items-center justify-between gap-3"><p class="truncate">Silvina · Web</p><p class="font-mono text-[9px] text-gris shrink-0">Calificada</p></div>
+              <div class="flex items-center justify-between gap-3"><p class="truncate">Daniela · WhatsApp</p><p class="font-mono text-[9px] text-azul shrink-0">Nueva</p></div>
+            </div>
+          </div>
+
+          <p class="text-gris text-[15px] leading-relaxed mt-4">Deja de tipear "¿está disponible?" cuarenta veces por día. Le llegan solo los clientes calientes, con todo el contexto: entra a cerrar, no a averiguar.</p>
+          <p class="font-mono text-[10px] text-grisc mt-3">panel de ejemplo</p>
+        </div>
+
+        <div class="rv rounded-2xl border border-white/10 bg-humo p-5" style="--d:200ms">
+          <h3 class="font-cond font-semibold text-xl leading-tight">El riesgo lo ponemos nosotros</h3>
+          <p class="text-gris text-[15px] leading-relaxed mt-2.5">Si el sistema pierde una consulta, ese mes no lo pagás.</p>
+          <p class="font-cond font-bold uppercase text-center leading-none text-3xl md:text-4xl mt-6">Cero <span class="num-glow">/</span> fugas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     ESTACIÓN 07 — TU EQUIPO GANA
      Psicología: desactiva la objeción silenciosa que mata la compra
      ("mi gente lo va a boicotear"). El giro: el robot hace el trabajo
      de robot y el humano queda libre para lo que solo un humano puede
@@ -394,7 +563,7 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
     <div class="md:grid md:grid-cols-12 md:gap-10">
       <div class="hidden md:flex md:col-span-2 items-start justify-center pt-4"><div data-hilo class="nodo"></div></div>
       <div class="md:col-span-10">
-        <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 05 — Tu equipo gana</p>
+        <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 07 — Tu equipo gana</p>
         <h2 class="rv font-cond font-bold uppercase leading-[.95] text-5xl md:text-8xl max-w-4xl" style="--d:80ms">No reemplaza a tu gente. Le saca el trabajo de robot.</h2>
         <div class="mt-14 max-w-2xl space-y-6 text-lg md:text-xl text-gris leading-relaxed">
           <p class="rv">Contestar el mismo precio cien veces. Repetir el horario. Filtrar curiosos a las 23hs. Perseguir al indeciso durante dos semanas. Eso es trabajo de robot, y ahora lo hace un robot.</p>
@@ -420,7 +589,7 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════
-     ESTACIÓN 7 — LA OFERTA
+     ESTACIÓN 08 — LA OFERTA
      Psicología (Hormozi): resultado prometido + todo incluido +
      garantía que traslada el riesgo al vendedor del sistema + escasez
      operativa real (cupos de implementación). La garantía repite la
@@ -429,7 +598,7 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
      ══════════════════════════════════════════════════════════════════ -->
 <section class="relative z-10 py-32 md:py-48 px-6 md:px-10">
   <div class="max-w-6xl mx-auto pl-8 md:pl-0">
-    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 06 — La oferta</p>
+    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 08 — La oferta</p>
     <h2 class="rv font-cond font-bold uppercase leading-[.95] text-5xl md:text-8xl max-w-4xl" style="--d:80ms">Cero consultas perdidas. O no pagás.</h2>
 
     <p class="rv font-mono text-xs text-grisc uppercase tracking-[.25em] mt-16 md:mt-24 mb-2">Todo lo que te llevás — siempre, todo junto</p>
@@ -475,14 +644,14 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════
-     ESTACIÓN 8 — PREGUNTAS (objeciones reales)
+     ESTACIÓN 09 — PREGUNTAS (objeciones reales)
      Psicología: FAQ = objeciones del interior argentino escritas como
      las dice el dueño, no como las escribiría un manual. Acordeón sin
      cajas: border-bottom fino y +/−, para no romper la página-documento.
      ══════════════════════════════════════════════════════════════════ -->
 <section class="relative z-10 py-32 md:py-48 px-6 md:px-10">
   <div class="max-w-3xl mx-auto pl-8 md:pl-0" x-data="{open:null}">
-    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 07 — Las dudas de siempre</p>
+    <p class="rv font-mono text-xs text-azul uppercase tracking-[.25em] mb-6">Estación 09 — Las dudas de siempre</p>
     <h2 class="rv font-cond font-bold uppercase leading-[.95] text-5xl md:text-7xl mb-16" style="--d:80ms">Lo que nos preguntan antes de arrancar.</h2>
 
     <template x-for="(f,i) in faqs" :key="i">
@@ -500,7 +669,7 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════════
-     ESTACIÓN 9 — CTA FINAL
+     ESTACIÓN 10 — CTA FINAL
      Psicología: recapitula la promesa con la imagen más concreta de
      toda la página (la consulta de las 23:47) y ofrece la bifurcación
      final: morir en visto o ser una venta. El hilo desemboca
@@ -525,6 +694,87 @@ h1,h2,h3,.cond{letter-spacing:-.015em}
     <a :href="wa" class="hover:text-gris transition-colors">WhatsApp directo</a>
   </div>
 </footer>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     LA DEMO — overlay a pantalla completa
+     Vive fuera del flujo de la página: no se ve nada hasta que se toca
+     el botón. Al abrirse toma toda la pantalla, así el visitante entra
+     a la demo en vez de leerla de costado. Se cierra con la X o con
+     Escape y vuelve exactamente al punto donde estaba.
+     El contenido lo generan demo-flows.js (los diálogos) y demo.js
+     (el motor que los actúa).
+     ══════════════════════════════════════════════════════════════════ -->
+<div id="demo-modal" role="dialog" aria-modal="true" aria-label="Demo interactiva" aria-hidden="true">
+
+  <div class="demo-head">
+    <div class="demo-head-t">
+      <span class="font-cond font-semibold text-lg tracking-tight">ecosystem<span class="text-azul">.ar</span></span>
+      <p id="demo-contexto">Elegí tu rubro</p>
+    </div>
+    <div class="flex items-center gap-4">
+      <button type="button" id="demo-volver" class="demo-volver" style="display:none">←<span> Cambiar de rubro</span></button>
+      <button type="button" id="demo-cerrar" class="demo-x" aria-label="Cerrar la demo">✕</button>
+    </div>
+  </div>
+
+  <div class="demo-wrap">
+
+    <!-- Paso 1: elegir el rubro -->
+    <div id="demo-selector">
+      <div class="demo-intro">
+        <h2>Probalo como si fueras tu cliente.</h2>
+        <p>Elegí tu rubro y escribile. El empleado digital te va a mostrar stock con fotos, contestarte las dudas, bancarte las objeciones y cerrar. Es el mismo sistema que después habla con tu forma de hablar y tus precios.</p>
+      </div>
+      <div class="demo-grid" id="demo-grid"><!-- lo llena demo.js desde DEMO_RUBROS --></div>
+    </div>
+
+    <!-- Paso 2: la conversación -->
+    <div id="demo-stage" class="demo-stage">
+
+      <div>
+        <div class="demo-tel">
+          <div class="wa-head">
+            <div class="wa-av" id="demo-av">E</div>
+            <div>
+              <h4 id="demo-nombre">Tu negocio</h4>
+              <span><i></i>en línea — siempre</span>
+            </div>
+          </div>
+          <div class="wa-chat" id="demo-chat"></div>
+          <div class="wa-opts" id="demo-opts"></div>
+          <div class="wa-input" id="demo-input">
+            <input type="text" id="demo-campo" autocomplete="off" placeholder="Escribí tu mensaje…">
+            <button type="button" id="demo-send" class="wa-send" aria-label="Enviar">
+              <svg viewBox="0 0 24 24"><path d="M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </div>
+          <div class="wa-ej" id="demo-ej"></div>
+        </div>
+        <p class="demo-col-label">Tu empleado digital, atendiendo</p>
+      </div>
+
+      <div class="demo-col-proc">
+        <div class="demo-proc">
+          <div class="demo-proc-h">
+            <h4>Procesos del sistema</h4>
+            <p>lo que pasa detrás de escena</p>
+          </div>
+          <div class="demo-proc-log" id="demo-proc-log">
+            <p class="demo-proc-vacio">Acá vas a ver lo que el sistema hace por detrás mientras te atiende: consultar stock, bloquear la agenda, descontar inventario, avisarle al vendedor.<br><br>Eso es lo que separa un sistema de un bot suelto.</p>
+          </div>
+        </div>
+        <p class="demo-col-label">Tu panel, en tiempo real</p>
+      </div>
+
+      <div class="demo-cta" id="demo-cta" style="display:none">
+        <p>Esto que acabás de probar es genérico. El tuyo va a hablar con tu stock, tus precios, tus horarios y tu forma de hablar.</p>
+        <a id="demo-cta-link" href="#" target="_blank" rel="noopener">Quiero esto para mi negocio</a>
+        <small>Demo de 15 min · Sin compromiso · Si el sistema pierde una consulta, no pagás</small>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- Analytics (descomentar al elegir proveedor)
 <script defer data-domain="ecosystem.ar" src="https://plausible.io/js/script.js"></script>
@@ -552,7 +802,7 @@ function pagina(){
       {q:'¿El cliente se da cuenta de que es un sistema?',
        a:'Se presenta como parte de tu equipo y responde con tu tono: no engaña a nadie. Lo que el cliente nota de verdad es otra cosa: que le contestaron al toque, un domingo a las 22hs.'},
       {q:'¿Y si no funciona para mi negocio?',
-       a:'Para eso está la demo: te mostramos el sistema andando con casos de tu rubro antes de que decidas nada. Y después, la garantía: si el sistema pierde una consulta, ese mes no lo pagás.'},
+       a:'Probalo antes de decidir nada: acá arriba tenés la demo andando con casos reales de tu rubro, sin registrarte. Y después, la garantía: si el sistema pierde una consulta, ese mes no lo pagás.'},
       {q:'¿Cuánto sale?',
        a:'Depende del sistema que tu negocio necesite, y se define en la demo con números claros. La cuenta que importa es la otra: cuánto te cuesta cada consulta que hoy se muere sin respuesta.'}
     ],
@@ -677,5 +927,10 @@ function pagina(){
   });
 })();
 </script>
+
+<!-- La demo: diálogos y motor. Van al final y sin `defer` en cascada
+     para que el modal esté armado antes del primer click posible. -->
+<script src="demo-flows.js"></script>
+<script src="demo.js"></script>
 </body>
 </html>
